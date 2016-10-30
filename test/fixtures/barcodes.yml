@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  inn: 1
+  index: 1
+  month: 1
+  start: 1
+  end: 1
+
+two:
+  inn: 1
+  index: 1
+  month: 1
+  start: 1
+  end: 1
