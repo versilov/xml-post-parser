@@ -1,8 +1,7 @@
-<form>
+<%= form_for @barcode, url: {action: "create"} do |f| %>
   <div class="form-group">
-    <label for="xmlInputFile">XML</label>
-    <input type="file" class="form-control-file" id="xmlInputFile" aria-describedby="fileHelp">
-    <small id="fileHelp" class="form-text text-muted">Загрузите ваш XML файл</small>
+    <%= f.label "Загрузите XML со штрих-кодом" %>
+    <%= f.file_field :xmlbarcode, class:  "form-control-file"%>
   </div>
-  <button type="submit" class="btn btn-primary">Отправить</button>
-</form>
+  <%= f.submit "Отправить", class:  "btn btn-primary"%>
+<% end %>

@@ -10,16 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161030054903) do
+ActiveRecord::Schema.define(version: 20161030071451) do
 
   create_table "barcodes", force: :cascade do |t|
-    t.integer  "inn"
+    t.integer  "inn",                     limit: 8
     t.integer  "index"
     t.integer  "month"
     t.integer  "start"
     t.integer  "end"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.string   "xmlbarcode_file_name"
+    t.string   "xmlbarcode_content_type"
+    t.integer  "xmlbarcode_file_size"
+    t.datetime "xmlbarcode_updated_at"
   end
 
 end
